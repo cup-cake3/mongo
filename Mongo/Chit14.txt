@@ -1,0 +1,73 @@
+db.createCollection('teachers')
+db.createCollection('students')
+db.createCollection('departments')
+
+db.teachers.insert([
+{
+  tname:'soham',
+  dno:1,
+  exp:3,
+  sal:25000,
+  doj:3/5
+},
+{
+  tname:'rohan',
+  dno:2,
+  exp:5,
+  sal:55000,
+  doj:9/8
+}
+
+])
+// **************************************
+db.departments.insert([
+{
+  dno:1,
+  dname:'it',
+},
+
+{
+  dno:2,
+  dname:'comp'
+}
+
+])
+// ***************************************
+
+db.students.insert([
+{
+  sname:'ishan',
+  rno:3,
+  class:'te'
+},
+
+{
+  sname:'nimit',
+  rno:2,
+  class:'fe'
+},
+
+{
+  sname:'xyz',
+  rno:5,
+  class:'se'
+}
+])
+// ****************************************
+
+// 2
+// db.teachers.find({dno:2,sal:{$gte:10000}},{_id:0,tname:1})
+
+// 3
+// db.students.find({$or:[{rno:2},{sname:'xyz'}]},{_id:0,sname:1})
+
+// 4
+// db.students.update({rno:5},{$set:{sname:'aman'}},{multi:true})
+// db.students.find()
+
+// 5
+// db.students.remove({class:'fe'})
+// db.students.find()
+
+// 6
+// db.students.createIndex({sname:1})

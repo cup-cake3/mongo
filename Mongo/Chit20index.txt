@@ -1,0 +1,46 @@
+db.createCollection('stud')
+db.stud.insert([
+  
+{
+  name:'s1',
+  rno:23,
+  year:'te'
+},
+
+{
+  name:'s2',
+  rno:2,
+  year:'se'
+},
+
+{
+  name:'s4',
+  rno:34,
+  year:'be'
+},
+
+{
+  name:'s5',
+  rno:28,
+  year:'te'
+}
+])
+
+// 3
+db.stud.createIndex({year:1})
+
+// 4
+db.stud.createIndex({name:1,rno:1})
+
+//5
+db.stud.createIndex({rno:1},{unique:true})
+
+//6
+db.stud.getIndexes()
+
+//7
+db.stud.dropIndex({rno:1})
+db.stud.dropIndex({name:1,rno:1})
+db.stud.dropIndex({year:1})
+
+db.stud.getIndexes()

@@ -1,0 +1,46 @@
+db.createCollection("movies")
+
+db.movies.insert([
+{
+  name:'movie1',
+  type:'action',
+  budget:1000000,
+  producer:{
+    name:'producer1',
+    address:'pune'
+  }
+},
+
+{
+  name:'movie2',
+  type:'romance',
+  budget:750000,
+  producer:{
+    name:'producer2',
+    address:'mumbai'
+  }
+},
+
+{
+  name:'movie3',
+  type:'comedy',
+  budget:1000000,
+  producer:{
+    name:'producer1',
+    address:'nagpur'
+  }
+}
+
+])
+
+// 1
+// db.movies.find({budget:{$gt:100000}},{name:1,_id:0})
+
+// 2
+// db.movies.find({'producer.address':'pune'},{_id:0,'producer.name':1})
+
+// 3
+// db.movies.update({type:'action'},{$set:{type:'horror'}},{multi:true})
+
+// 4
+// db.movies.find({'producer.name':'producer1'},{_id:0,name:1,'producer.address':1}).pretty()

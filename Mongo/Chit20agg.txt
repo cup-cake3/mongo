@@ -1,0 +1,83 @@
+
+db.createCollection('students')
+
+db.students.insert([
+{
+  roll:1,
+  name:'navin',
+  sub:'dmsa',
+  marks:78
+},
+
+{
+  roll:2,
+  name:'anusha',
+  sub:'osd',
+  marks:75
+},
+
+{
+  roll:3,
+  name:'ravi',
+  sub:'toc',
+  marks:69
+},
+
+{
+  roll:4,
+  name:'veena',
+  sub:'toc',
+  marks:70
+},
+
+{
+  roll:5,
+  name:'pravini',
+  sub:'osd',
+  marks:80
+},
+
+{
+  roll:6,
+  name:'reena',
+  sub:'dmsa',
+  marks:50
+},
+
+{
+  roll:7,
+  name:'geeta',
+  sub:'cn',
+  marks:90
+},
+
+{
+  roll:8,
+  name:'akash',
+  sub:'cn',
+  marks:85
+}
+
+])
+
+
+// 1
+// db.students.aggregate({$group:{_id:'$sub',maxmarks:{$max:'$marks'}}})
+
+// 2
+// db.students.aggregate({$group:{_id:'$sub',minmarks:{$min:'$marks'}}})
+
+// 3
+// db.students.aggregate({$group:{_id:'$sub',summarks:{$sum:'$marks'}}})
+
+// 4
+// db.students.aggregate({$group:{_id:'$sub',avgmarks:{$avg:'$marks'}}})
+
+// 5
+// db.students.aggregate({$group:{_id:'$sub',firstmarks:{$first:'$marks'}}})
+
+// 6
+// db.students.aggregate({$group:{_id:'$sub',lastmarks:{$last:'$marks'}}})
+
+// 7
+// db.students.aggregate({$group:{_id:'$sub',countrecords:{$sum:1}}})

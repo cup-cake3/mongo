@@ -1,0 +1,47 @@
+use department
+db.createCollection('department')
+db.department.insert([
+
+{
+  name:'t1',
+  dept:'comp',
+  exp:2,
+  sal:10000
+},
+
+{
+  name:'t2',
+  dept:'entc',
+  exp:5,
+  sal:60000
+},
+
+{
+  name:'t3',
+  dept:'comp',
+  exp:10,
+  sal:75000
+},
+
+{
+  name:'t4',
+  dept:'entc',
+  exp:7,
+  sal:34000
+},
+
+])
+
+
+//3
+// db.department.aggregate({$group:{_id:'$dept','deptwiseavg':{$avg:'$sal'}
+
+// 4
+// db.department.aggregate({$group:{_id:'$dept','deptwisecount':{$sum:1}}})
+
+// 5
+// db.department.aggregate({$group:{_id:'$dept','minsal':{$min:'$sal'}}})
+
+// 6
+// db.department.createIndex({name:1})
+// db.department.dropIndex({name:1})

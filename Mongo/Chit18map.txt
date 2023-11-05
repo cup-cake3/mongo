@@ -1,0 +1,42 @@
+db.createCollection('city')
+db.city.insert([
+{
+  city:'pune',
+  type:'urban',
+  state:'mh',
+  pop:5600000
+},
+
+{
+  city:'nashik',
+  type:'urban',
+  state:'mh',
+  pop:4400000
+},
+
+{
+  city:'jalna',
+  type:'rural',
+  state:'mh',
+  pop:560000
+}
+
+])
+
+// 1
+// var v1=function(){emit(this.state,this.pop)}
+// var v2=function(key,value){return Array.sum(value)}
+// db.city.mapReduce(v1,v2,{out:'statewisepop'})
+// db.statewisepop.find()
+
+// 2
+// var v1=function(){emit(this.city,this.pop)}
+// var v2=function(key,value){return Array.sum(value)}
+// db.city.mapReduce(v1,v2,{out:'citywisepop'})
+// db.citywisepop.find()
+
+// 3
+// var v1=function(){emit(this.type,this.pop)}
+// var v2=function(key,value){return Array.sum(value)}
+// db.city.mapReduce(v1,v2,{out:'typewisepop'})
+// db.typewisepop.find()

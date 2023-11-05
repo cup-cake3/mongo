@@ -1,0 +1,164 @@
+use institute
+db.createCollection('student1')
+
+db.student1.insert([
+{
+  rno:1,
+  sname:'ishan',
+  age:20,
+  branch:'comp',
+  address:{
+    city:'pune',
+    state:'mh'
+  },
+  hobby:['piano','tt']
+},
+
+{
+  rno:2,
+  sname:'sakshi',
+  age:20,
+  branch:'civil',
+  address:{
+    city:'nagpur',
+    state:'mh'
+  },
+  hobby:['reading','drawing']
+},
+
+{
+  rno:3,
+  sname:'anushka',
+  age:12,
+  branch:'comp',
+  address:{
+    city:'pune',
+    state:'mh'
+  },
+  hobby:['sing','dance']
+},
+
+{
+  rno:4,
+  sname:'aman',
+  age:18,
+  branch:'comp',
+  address:{
+    city:'pune',
+    state:'mh'
+  },
+  hobby:['chess','sing']
+},
+
+{
+  rno:5,
+  sname:'pushkar',
+  age:17,
+  branch:'entc',
+  address:{
+    city:'kochi',
+    state:'kerala'
+  },
+  hobby:['reading','dance']
+},
+
+{
+  rno:6,
+  sname:'sayali',
+  age:26,
+  branch:'entc',
+  address:{
+    city:'ahmedabad',
+    state:'gujarat'
+  },
+  hobby:['editing','chess']
+},
+
+{
+  rno:7,
+  sname:'riya',
+  age:29,
+  branch:'civil',
+  address:{
+    city:'indore',
+    state:'mp'
+  },
+  hobby:['drawing','singing']
+},
+
+{
+  rno:8,
+  sname:'ajit',
+  age:14,
+  branch:'mech',
+  address:{
+    city:'pune',
+    state:'mh'
+  },
+  hobby:['singing','dance']
+},
+
+{
+  rno:9,
+  sname:'trapti',
+  age:24,
+  branch:'comp',
+  address:{
+    city:'pune',
+    state:'mh'
+  },
+  hobby:['cooking','singing']
+},
+
+{
+  rno:10,
+  sname:'pratik',
+  age:20,
+  branch:'entc',
+  address:{
+    city:'pune',
+    state:'mh'
+  },
+  hobby:['editing','reading']
+}  
+])
+
+
+// 4
+// db.student1.find()
+
+//5
+// db.student1.find({age:{$gt:15}})
+
+// 6
+// db.student1.find().sort({sname:1})
+
+// 7
+// db.student1.update({rno:3},{$set:{branch:'entc'}})
+// db.student1.find()
+
+// 8
+// db.student1.remove({rno:1})
+// db.student1.find()
+
+// 9
+// db.student1.find({sname:/^a/})
+
+// 10
+// db.student1.find({}).count()
+
+// 11
+// db.student1.find().limit(5)
+
+// 12
+// db.student1.find().skip(3)
+
+// 13
+// db.student1.find({'address.city':'pune'},{_id:0,sname:1})
+
+// 14
+// db.student1.find({},{_id:0,sname:1})
+
+// 15
+// db.student1.drop()
+// db.student1.find()
